@@ -8,11 +8,14 @@ How to use
 
 iReSign allows you to re-sign any unencrypted ipa-file with any certificate for which you hold the corresponding private key. iResign can also created a signed ipa-file from an xcarchive file.
 
-1. Drag your unsigned .ipa or .xcarchive file to the top box, or use the browse button.
+1. Drag your need resigned or unsigned .ipa .xcarchive file to the top box, or use the browse button.
+
 2.找一个开发环境配置文件生成entitlements.plist文件
+
 后面签名要用到：
 security cms -D -i XX.mobileprovision  > profile.plist
 /usr/libexec/PlistBuddy -x -c 'Print :Entitlements' profile.plist > entitlements.plist
+
 3. Enter your full certificate name from Keychain Access, for example "iPhone Developer: Firstname Lastname (XXXXXXXXXX)" in the bottom box.
 
 4. Click ReSign! and wait. The resigned file will be saved in the same folder as the original file.
