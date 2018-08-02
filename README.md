@@ -10,9 +10,8 @@ iReSign allows you to re-sign any unencrypted ipa-file with any certificate for 
 
 1. Drag your need resigned or unsigned .ipa .xcarchive file to the top box, or use the browse button.
 
-2.找一个开发环境配置文件生成entitlements.plist文件
+2. configure an entitlements.plist file
 
-后面签名要用到：
 security cms -D -i XX.mobileprovision  > profile.plist
 /usr/libexec/PlistBuddy -x -c 'Print :Entitlements' profile.plist > entitlements.plist
 
